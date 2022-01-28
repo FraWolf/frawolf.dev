@@ -1,0 +1,96 @@
+{
+    "socials": [
+        {
+            "name": "GitHub",
+            "icon": "fab fa-github",
+            "url": "https://github.com/FraWolf"
+        },
+        {
+            "name": "LinkedIn",
+            "icon": "fab fa-linkedin",
+            "url": "https://www.linkedin.com/in/francesco-lombardo-454988163/"
+        }
+    ],
+    "projects": [
+        {
+            "name": "Personal website",
+            "short_description": "This website :)",
+            "description": "",
+            "images": [],
+            "tags": ["website"]
+        },
+        {
+            "name": "Racconti da GDR | Website & Bot",
+            "short_description": "Lorem impsum",
+            "description": "",
+            "images": [],
+            "tags": ["website", "discord_bot"]
+        },
+        {
+            "name": "Quria, Destiny Wrapper",
+            "short_description": "Destiny API Wrapper made in TypeScript",
+            "description": "",
+            "images": [],
+            "tags": ["typescript", "api_library"]
+        },
+        {
+            "name": "SmartLife API",
+            "short_description": "API for interact with SmartLife/Tuya smart devices",
+            "description": "",
+            "images": [],
+            "tags": ["api_library"]
+        },
+        {
+            "name": "OverInsider",
+            "short_description": "Overwatch Discord Bot",
+            "description": "",
+            "images": [],
+            "tags": ["discord_bot"]
+        },
+        {
+            "name": "MCServerItalia Website",
+            "short_description": "si insomma quello",
+            "description": "",
+            "images": [],
+            "tags": ["website"]
+        }
+    ],
+    "tags": {
+        "svelte": {
+            "name": "Svelte",
+            "color": "orange",
+            "icon": null,
+            "url": null
+        },
+        "nextjs": {
+            "name": "Next.js",
+            "color": "red",
+            "icon": null,
+            "url": null
+        },
+        "api_library": {
+            "name": "API / Library",
+            "color": "red",
+            "icon": null,
+            "url": null
+        },
+        "website": {
+            "name": "Website",
+            "color": "red",
+            "icon": null,
+            "url": null
+        },
+        "discord_bot": {
+            "name": "Discord Bot",
+            "color": "red",
+            "icon": null,
+            "url": null
+        },
+        "typescript": {
+            "name": "TypeScript",
+            "color": "red",
+            "icon": null,
+            "url": null
+        }
+    }
+}
