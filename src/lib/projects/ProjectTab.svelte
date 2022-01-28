@@ -7,7 +7,7 @@
 </script>
 
 <div
-	class="mx-2 my-2 rounded-lg bg-white px-8 py-4 shadow-md dark:bg-gray-800 md:mx-0 md:my-0 md:max-w-md"
+	class="mx-2 my-2 rounded-lg bg-white px-8 py-4 shadow-md dark:bg-gray-800 md:mx-0 md:my-0 md:max-w-sm"
 >
 	<div class="flex items-center space-x-2">
 		{#each tags as tag}
