@@ -23,5 +23,5 @@ npm run build
 
 ## Todo list
 
-- [] Modal when "Informations" button get clicked
-- [] Hovering the name appears an tooltip with my full name
+- [ ] Modal when "Informations" button get clicked
+- [ ] Hovering the name appears an tooltip with my full name
