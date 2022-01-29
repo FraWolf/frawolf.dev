@@ -11,7 +11,7 @@
 >
 	<div class="flex items-center space-x-2">
 		{#each tags as tag}
-			<Tag name={tag.name} color={tag.color} />
+			<Tag name={tag.name} />
 		{/each}
 	</div>
 
