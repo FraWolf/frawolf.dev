@@ -9,6 +9,11 @@
             "name": "LinkedIn",
             "icon": "fab fa-linkedin",
             "url": "https://www.linkedin.com/in/francesco-lombardo-454988163/"
+        },
+        {
+            "name": "Email",
+            "icon": "fas fa-envelope",
+            "url": "mailto:francesco.lombardo1709@gmail.com"
         }
     ],
     "projects": [
