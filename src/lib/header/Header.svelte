@@ -12,14 +12,23 @@
 	/>
 	<div>
 		<h1 class="text-center text-4xl font-bold text-white md:text-left">
-			<span class="underline decoration-green-400 decoration-wavy decoration-2">Francesco</span> Lombardo
+			<span class="underline decoration-green-400 decoration-wavy decoration-2">Francesco</span>
+			Lombardo
 		</h1>
 		<h3 class="mt-2 text-center text-2xl italic text-white md:text-left">
-			Junior Full Stack Developer
+			Junior Full Stack Developer @
+			<a
+				href="https://aryel.io"
+				class="underline decoration-[#ff00cf] decoration-wavy decoration-1 transition-colors duration-150 hover:text-[#ff00cf] hover:decoration-white"
+				target="_blank"
+				rel="noreferrer"
+			>
+				Aryel
+			</a>
 		</h3>
-		<div class="mt-1 space-x-3 text-center md:text-left">
+		<div class="mt-1 flex items-center space-x-3 text-center md:text-left">
 			{#each socials as social}
-				<SocialIcon icon={social.icon} url={social.url} />
+				<SocialIcon name={social.name} icon={social.icon} url={social.url} />
 			{/each}
 		</div>
 	</div>

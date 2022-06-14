@@ -1,6 +1,9 @@
 <script lang="ts">
+	export let name: string;
 	export let icon: string;
 	export let url: string;
+
+	let test = icon.replace('file:', '/static/');
 </script>
 
 <a
@@ -9,5 +12,9 @@
 	target="_blank"
 	rel="noreferrer"
 >
-	<i class={icon} />
+	{#if icon.startsWith('file:')}
+		<img src={test} class="h-6" alt={name} />
+	{:else}
+		<i class={icon} alt={name} />
+	{/if}
 </a>
