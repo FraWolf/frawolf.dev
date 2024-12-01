@@ -1,0 +1,39 @@
+---
+import { socials } from "../data/data.json";
+import Icon from "./Icon.astro";
+import ProjectTab from "./ProjectTab.astro";
+---
+
+<div class="my-28 md:flex md:items-center md:justify-center">
+  <img
+    src="/img/me.jpg"
+    alt="Me"
+    class="mx-auto mb-1 h-32 w-32 rounded-full object-cover md:mx-4 md:mb-0"
+  />
+  <div>
+    <h1 class="text-center text-4xl font-bold text-white md:text-left">
+      <span class="underline decoration-fra decoration-wavy decoration-2"
+        >Francesco</span
+      >
+      Lombardo
+    </h1>
+    <h3 class="mt-2 text-center text-2xl italic text-white md:text-left">
+      Junior Full Stack Developer @
+      <a
+        href="https://aryel.io"
+        class="underline decoration-aryel decoration-wavy decoration-1 transition-colors duration-150 hover:text-aryel hover:decoration-white"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Aryel
+      </a>
+    </h3>
+    <div class="mt-1 flex items-center space-x-3 text-center md:text-left">
+      {
+        socials.map((item) => {
+          return <Icon name={item.name} icon={item.icon} url={item.url} />;
+        })
+      }
+    </div>
+  </div>
+</div>

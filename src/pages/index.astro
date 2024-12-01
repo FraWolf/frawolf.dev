@@ -1,0 +1,40 @@
+---
+import DefaultLayout from "../layouts/DefaultLayout.astro";
+// import { projects } from "../data/data.json";
+import ProjectTab from "../components/ProjectTab.astro";
+
+const projects = await Astro.glob("../pages/projects/*.md");
+
+console.log(projects[0], projects[0].frontmatter);
+---
+
+<DefaultLayout title="Home">
+  <div>
+    <h3
+      class="mb-4 text-center text-3xl font-bold uppercase tracking-wider text-white"
+    >
+      My Projects
+    </h3>
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
+      <!-- {#each files.projects as project}
+				<ProjectTab
+					title={project.name}
+					description={project.short_description}
+					tags={generateTags(project.tags)}
+				/>
+			{/each} -->
+
+      {
+        projects.map((item) => {
+          return (
+            <ProjectTab
+              title={item.frontmatter.title}
+              description={item.frontmatter.description}
+              url={item.url!}
+            />
+          );
+        })
+      }
+    </div>
+  </div>
+</DefaultLayout>
