@@ -1,7 +1,8 @@
 ---
+import { getCollection } from "astro:content";
 import ProjectCard from "./project-card.astro";
 
-const projects = [
+const jsonProjects = [
   {
     name: "Personal website",
     description: "This website :)",
@@ -71,6 +72,12 @@ const oldProjects = [
 ];
 
 const totalProjectsPerView = 6;
+
+const projects = (await getCollection("projects"))
+  .slice(0, totalProjectsPerView)
+  ?.map((project) => {
+    return project.data;
+  });
 ---
 
 <section class="container mx-auto px-4 py-8">
@@ -81,18 +88,13 @@ const totalProjectsPerView = 6;
         View all →
       </a>
     </div>
-  </div>
-  <div class="grid gap-4 grid-cols-1 md:grid-cols-3">
-    {
-      projects.slice(0, totalProjectsPerView).map((project) => {
-        return <ProjectCard {...project} />;
-      })
-    }
 
-    <!-- {
-          projects
-            .slice(0, 6)
-            .map((project, index) => <ProjectCard key={index} {...project} />)
-        } -->
+    <div class="grid gap-4 grid-cols-1 md:grid-cols-3">
+      {
+        projects.map((project) => {
+          return <ProjectCard {...project} />;
+        })
+      }
+    </div>
   </div>
 </section>

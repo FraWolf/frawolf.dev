@@ -1,13 +1,9 @@
 ---
-// import { ExternalLink } from "lucide-react";
+import { ExternalLink } from "@lucide/astro";
+import type { IProject } from "../schemas/project";
 import Pill from "./pill.astro";
 
-interface Props {
-  name: string;
-  description: string;
-  link?: string;
-  technologies: string[];
-}
+type Props = IProject;
 
 const { name, description, link, technologies } = Astro.props;
 ---
@@ -31,7 +27,7 @@ const { name, description, link, technologies } = Astro.props;
           class="text-muted-foreground hover:text-primary transition-colors flex-shrink-0"
           aria-label={`View ${name} project`}
         >
-          {/* <ExternalLink class="h-4 w-4" /> */}
+          <ExternalLink class="h-4 w-4" />
         </a>
       )
     }
