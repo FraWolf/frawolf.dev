@@ -1,39 +1,65 @@
 ---
-import { socials } from "../data/data.json";
-import Icon from "./Icon.astro";
-import ProjectTab from "./ProjectTab.astro";
+const socials = [
+  {
+    name: "GitHub",
+    icon: "fab fa-github",
+    url: "https://github.com/FraWolf",
+  },
+  {
+    name: "LinkedIn",
+    icon: "fab fa-linkedin",
+    url: "https://www.linkedin.com/in/francesco-lombardo-454988163/",
+  },
+  {
+    name: "Email",
+    icon: "fas fa-envelope",
+    url: "mailto:francesco.lombardo1709@gmail.com",
+  },
+  {
+    name: "Ethereum",
+    icon: "fab fa-ethereum",
+    url: "https://etherscan.io/address/0x889eb06db012f3de50432b9c4731f1946e7bc093",
+  },
+];
 ---
 
-<div class="my-28 md:flex md:items-center md:justify-center">
-  <img
-    src="/img/me.jpg"
-    alt="Me"
-    class="mx-auto mb-1 h-32 w-32 rounded-full object-cover md:mx-4 md:mb-0"
-  />
-  <div>
-    <h1 class="text-center text-4xl font-bold text-white md:text-left">
-      <span class="underline decoration-fra decoration-wavy decoration-2"
-        >Francesco</span
-      >
-      Lombardo
-    </h1>
-    <h3 class="mt-2 text-center text-2xl italic text-white md:text-left">
-      Junior Full Stack Developer @
-      <a
-        href="https://aryel.io"
-        class="underline decoration-aryel decoration-wavy decoration-1 transition-colors duration-150 hover:text-aryel hover:decoration-white"
-        target="_blank"
-        rel="noreferrer"
-      >
-        Aryel
-      </a>
-    </h3>
-    <div class="mt-1 flex items-center space-x-3 text-center md:text-left">
+<section class="container mx-auto px-4 py-12 md:py-20">
+  <div
+    class="flex flex-col md:flex-row items-center justify-center gap-4 mb-12"
+  >
+    <img
+      class="w-16 h-16 rounded-full object-cover"
+      src="/doggo.jpg"
+      alt="Doggo"
+    />
+    <div class="flex flex-col gap-2">
+      <h1 class="text-2xl md:text-4xl font-bold">Francesco Lombardo</h1>
+      <p class="text-lg md:text-xl text-muted-foreground">
+        Junior Full Stack Developer
+      </p>
+    </div>
+  </div>
+
+  <div class="flex flex-col items-center text-center max-w-2xl mx-auto">
+    <p class="text-base text-muted-foreground leading-relaxed mb-8">
+      I build accessible, pixel-perfect digital experiences for the web.
+      Specializing in modern JavaScript frameworks and creating seamless user
+      interfaces.
+    </p>
+    <div class="flex flex-wrap gap-3 justify-center">
       {
-        socials.map((item) => {
-          return <Icon name={item.name} icon={item.icon} url={item.url} />;
+        socials.map((social) => {
+          return (
+            <a
+              href={social.url}
+              class="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-border hover:border-primary hover:text-primary transition-colors"
+              target="_blank"
+            >
+              {social.name}
+            </a>
+          );
         })
       }
     </div>
   </div>
-</div>
+</section>

@@ -1,0 +1,98 @@
+---
+import ProjectCard from "./project-card.astro";
+
+const projects = [
+  {
+    name: "Personal website",
+    description: "This website :)",
+    link: "https://github.com/FraWolf/frawolf.dev",
+    technologies: ["Astro", "TypeScript", "TailwindCSS", "CF Workers"],
+  },
+  {
+    name: "Quria, Destiny Wrapper",
+    description: "Destiny API Wrapper made in TypeScript",
+    link: "https://github.com/FraWolf/quria",
+    technologies: ["TypeScript"],
+  },
+];
+
+const oldProjects = [
+  {
+    name: "Personal website",
+    short_description: "This website :)",
+    description: "",
+    images: [],
+    tags: ["website"],
+    links: [
+      {
+        name: "GitHub",
+        url: "https://github.com/FraWolf/frawolf.dev",
+      },
+    ],
+    tech_stack: ["nextjs", "react", "discordjs"],
+  },
+  {
+    name: "Racconti da GDR | Website & Bot",
+    short_description:
+      "Website & Discord bot for RolePlaying sessions management",
+    description: "",
+    images: [],
+    tags: ["website", "discord_bot"],
+  },
+
+  {
+    name: "SmartLife API",
+    short_description: "API for interact with SmartLife/Tuya smart devices",
+    description: "",
+    images: [],
+    tags: ["api_library"],
+  },
+  {
+    name: "OverInsider",
+    short_description: "Overwatch Discord Bot",
+    description: "",
+    images: [],
+    tags: ["discord_bot"],
+  },
+  {
+    name: "MCServerItalia Website",
+    short_description: "Website for game servers browser",
+    description: "",
+    images: [],
+    tags: ["website"],
+  },
+  {
+    name: "Avalart",
+    short_description: "NFT Marketplace powered by Avalanche",
+    description: "",
+    images: [],
+    tags: ["website", "blockchain"],
+  },
+];
+
+const totalProjectsPerView = 6;
+---
+
+<section class="container mx-auto px-4 py-8">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex items-center justify-between mb-6">
+      <h2 class="text-2xl font-bold">Projects</h2>
+      <a href="/projects" class="text-sm text-primary hover:underline">
+        View all →
+      </a>
+    </div>
+  </div>
+  <div class="grid gap-4 grid-cols-1 md:grid-cols-3">
+    {
+      projects.slice(0, totalProjectsPerView).map((project) => {
+        return <ProjectCard {...project} />;
+      })
+    }
+
+    <!-- {
+          projects
+            .slice(0, 6)
+            .map((project, index) => <ProjectCard key={index} {...project} />)
+        } -->
+  </div>
+</section>
