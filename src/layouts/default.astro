@@ -1,5 +1,7 @@
 ---
 import "../styles/globals.css";
+
+import { ClientRouter } from "astro:transitions";
 ---
 
 <html lang="en" class="dark">
@@ -9,6 +11,8 @@ import "../styles/globals.css";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>frawolf.dev</title>
+
+    <ClientRouter />
   </head>
   <body class="bg-background text-foreground min-h-screen">
     <slot />
