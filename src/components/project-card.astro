@@ -3,6 +3,7 @@ import { ExternalLink } from "@lucide/astro";
 import type { IProject } from "../schemas/content";
 import Pill from "./pill.astro";
 import { tw } from "../utils/merge";
+import { parsePreviewUrl } from "../utils/parser";
 
 type Props = IProject;
 
@@ -34,11 +35,13 @@ const { name, description, link, technologies, discontinued } = Astro.props;
       >
         {name}
       </h3>
-      <!-- {
-        linkPreview && (
-          <p class="text-xs text-muted-foreground/70 mt-1">{linkPreview}</p>
+      {
+        link && (
+          <p class="text-xs text-muted-foreground/70 mt-1">
+            {parsePreviewUrl(link)}
+          </p>
         )
-      } -->
+      }
     </div>
 
     {

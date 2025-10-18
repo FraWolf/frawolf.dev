@@ -24,5 +24,12 @@
     "link": "https://giornogaming.it",
     "technologies": ["TypeScript"],
     "discontinued": false
+  },
+  {
+    "name": "BF6 Config Editor",
+    "description": "Easily edit, tweak, and optimize your Battlefield 6 configuration files with our BF6 Config Editor. Improve FPS, visuals, and gameplay settings in seconds.",
+    "link": "https://github.com/FraWolf/bf6-config",
+    "technologies": ["React", "TypeScript", "Cloudflare Pages"],
+    "discontinued": false
   }
 ]
