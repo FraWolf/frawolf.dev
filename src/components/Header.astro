@@ -1,4 +1,6 @@
 ---
+import SocialBtn from "./social-btn.astro";
+
 const socials = [
   {
     name: "GitHub",
@@ -49,15 +51,7 @@ const socials = [
     <div class="flex flex-wrap gap-3 justify-center">
       {
         socials.map((social) => {
-          return (
-            <a
-              href={social.url}
-              class="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-border hover:border-primary hover:text-primary transition-colors"
-              target="_blank"
-            >
-              {social.name}
-            </a>
-          );
+          return <SocialBtn social={social} />;
         })
       }
     </div>

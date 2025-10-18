@@ -1,0 +1,18 @@
+---
+interface Props {
+  social: {
+    name: string;
+    url: string;
+  };
+}
+
+const { social } = Astro.props;
+---
+
+<a
+  href={social.url}
+  class="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-border hover:border-primary hover:text-primary transition-colors"
+  target="_blank"
+>
+  {social.name}
+</a>
