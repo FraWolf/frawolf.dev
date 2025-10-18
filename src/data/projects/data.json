@@ -3,18 +3,26 @@
     "name": "frawolf.dev",
     "description": "This website :)",
     "link": "https://github.com/FraWolf/frawolf.dev",
-    "technologies": ["Astro", "TypeScript", "TailwindCSS", "Cloudflare Workers"]
+    "technologies": [
+      "Astro",
+      "TypeScript",
+      "TailwindCSS",
+      "Cloudflare Workers"
+    ],
+    "discontinued": false
   },
   {
     "name": "Quria",
     "description": "Destiny API Wrapper written in TypeScript",
     "link": "https://github.com/FraWolf/quria",
-    "technologies": ["TypeScript"]
+    "technologies": ["TypeScript"],
+    "discontinued": false
   },
   {
     "name": "giornogaming.it",
     "description": "Website for italian streamer and content creator GiornoGaming",
     "link": "https://giornogaming.it",
-    "technologies": ["TypeScript"]
+    "technologies": ["TypeScript"],
+    "discontinued": false
   }
 ]

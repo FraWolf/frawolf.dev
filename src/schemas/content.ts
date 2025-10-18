@@ -5,6 +5,7 @@ export const projectSchema = z.object({
   description: z.string(),
   link: z.string().optional(),
   technologies: z.array(z.string()),
+  discontinued: z.boolean().default(false),
 });
 
 export const blogPostSchema = z.object({
