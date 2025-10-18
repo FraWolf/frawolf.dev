@@ -2,6 +2,7 @@
 import DefaultLayout from "../layouts/default.astro";
 import Header from "../components/header.astro";
 import ProjectSection from "../components/project-section.astro";
+import BlogSection from "../components/blog-section.astro";
 
 const projects = [
   {
@@ -110,22 +111,5 @@ const blogPosts = [
   <Header />
 
   <ProjectSection />
-
-  <section class="container mx-auto px-4 py-8 pb-16">
-    <div class="max-w-6xl mx-auto">
-      <div class="flex items-center justify-between mb-6">
-        <h2 class="text-2xl font-bold">Blog Posts</h2>
-        <a href="/blog" class="text-sm text-primary hover:underline">
-          View all →
-        </a>
-      </div>
-      <div class="grid gap-4 grid-cols-1 md:grid-cols-3">
-        <!-- {
-          blogPosts
-            .slice(0, 6)
-            .map((post, index) => <ProjectCard key={index} {...post} />)
-        } -->
-      </div>
-    </div>
-  </section>
+  <BlogSection />
 </DefaultLayout>
