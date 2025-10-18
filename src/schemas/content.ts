@@ -7,4 +7,12 @@ export const projectSchema = z.object({
   technologies: z.array(z.string()),
 });
 
+export const blogPostSchema = z.object({
+  title: z.string(),
+  description: z.string(),
+  tags: z.array(z.string()).default([]),
+  author: z.string(),
+});
+
 export type IProject = z.infer<typeof projectSchema>;
+export type IBlogPost = z.infer<typeof blogPostSchema>;
