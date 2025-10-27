@@ -1,92 +1,65 @@
 ---
-import { Search } from "@lucide/astro";
+import { House } from "@lucide/astro";
 import ProjectCard from "../../components/project-card.astro";
 import DefaultLayout from "../../layouts/default.astro";
 import { getCollection } from "astro:content";
 
-const searchQuery = "";
-
-const totalProjectsPerView = 6;
-
-const projects = (await getCollection("projects"))
-  .slice(0, totalProjectsPerView)
-  ?.map((project) => {
-    return project.data;
-  });
-
-const filteredProjects = projects.filter((project) => {
-  const query = searchQuery.toLowerCase();
-  return true;
-  // return (
-  //   project.title.toLowerCase().includes(query) ||
-  //   project.description.toLowerCase().includes(query) ||
-  //   project.technologies.some((tech) => tech.toLowerCase().includes(query))
-  // );
+const projectsCollection = await getCollection("projects");
+const projects = projectsCollection?.map((project) => {
+  return project.data;
 });
 ---
 
 <DefaultLayout>
   <div class="min-h-screen">
-    <header class="border-b border-border">
+    <header class="border-border border-b">
       <div class="container mx-auto px-4 py-4">
-        <div class="flex items-center justify-between max-w-6xl mx-auto">
+        <div class="mx-auto flex max-w-6xl items-center justify-between">
           <a
             href="/"
-            class="flex items-center gap-3 hover:opacity-80 transition-opacity"
+            class="flex items-center gap-3 transition-opacity hover:opacity-80"
           >
             <img
-              class="w-10 h-10 rounded-full object-cover"
+              class="h-10 w-10 rounded-full object-cover"
               src="/doggo.jpg"
               alt="Doggo"
             />
             <span class="font-semibold">Francesco Lombardo</span>
           </a>
+
+          <!-- Button for desktop -->
           <a
             href="/"
-            class="text-sm text-muted-foreground hover:text-primary transition-colors"
+            class="text-muted-foreground hover:text-primary hidden text-sm transition-colors sm:block"
           >
             Return to home
+          </a>
+
+          <!-- Button for mobile -->
+          <a
+            href="/"
+            class="text-muted-foreground hover:text-primary block text-sm transition-colors sm:hidden"
+          >
+            <House />
           </a>
         </div>
       </div>
     </header>
 
     <section class="container mx-auto px-4 py-12">
-      <div class="max-w-6xl mx-auto">
-        <h1 class="text-3xl md:text-4xl font-bold mb-2">All Projects</h1>
+      <div class="mx-auto max-w-6xl">
+        <h1 class="mb-2 text-3xl font-bold md:text-4xl">All Projects</h1>
         <p class="text-muted-foreground mb-8">
           A collection of my work and side projects
         </p>
 
-        <!-- <div class="relative mb-8">
-          <Search
-            class="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground"
-          />
-          <input
-            type="text"
-            placeholder="Search projects by name, description, or technology..."
-            value={searchQuery}
-            class="w-full pl-10 pr-4 py-3 bg-card border border-border rounded-lg text-sm focus:outline-none focus:border-primary/50 transition-colors"
-          />
-        </div> -->
-
-        <div class="grid gap-4 grid-cols-1 md:grid-cols-3">
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {
-            filteredProjects.map((project) => {
+            projects.map((project) => {
               return <ProjectCard {...project} />;
             })
           }
         </div>
-
-        {
-          filteredProjects.length === 0 && (
-            <div class="text-center py-12">
-              <p class="text-muted-foreground">
-                No projects found matching your search.
-              </p>
-            </div>
-          )
-        }
       </div>
     </section>
   </div>
