@@ -1,8 +1,10 @@
 ---
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
 import { House } from "@lucide/astro";
 import ProjectCard from "../../components/project-card.astro";
 import DefaultLayout from "../../layouts/default.astro";
-import { getCollection } from "astro:content";
+import doggoAvatar from "../../assets/doggo.jpg";
 
 const projectsCollection = await getCollection("projects");
 const projects = projectsCollection?.map((project) => {
@@ -19,10 +21,11 @@ const projects = projectsCollection?.map((project) => {
             href="/"
             class="flex items-center gap-3 transition-opacity hover:opacity-80"
           >
-            <img
-              class="h-10 w-10 rounded-full object-cover"
-              src="/doggo.jpg"
-              alt="Doggo"
+            <Image
+              src={doggoAvatar}
+              loading={"eager"}
+              alt={"Profile pic"}
+              class={"h-10 w-10 rounded-full object-cover"}
             />
             <span class="font-semibold">Francesco Lombardo</span>
           </a>

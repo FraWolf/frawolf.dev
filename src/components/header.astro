@@ -1,5 +1,7 @@
 ---
 import SocialBtn from "./social-btn.astro";
+import doggoAvatar from "../assets/doggo.jpg";
+import { Image } from "astro:assets";
 
 const socials = [
   {
@@ -29,10 +31,11 @@ const socials = [
   <div
     class="mb-12 flex flex-col items-center justify-center gap-4 md:flex-row"
   >
-    <img
-      class="h-16 w-16 rounded-full object-cover"
-      src="/doggo.jpg"
-      alt="Doggo"
+    <Image
+      src={doggoAvatar}
+      loading={"eager"}
+      alt={"Profile pic"}
+      class={"h-16 w-16 rounded-full object-cover"}
     />
 
     <div class="flex flex-col gap-2">
