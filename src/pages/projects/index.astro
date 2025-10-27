@@ -1,10 +1,7 @@
 ---
-import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
-import { House } from "@lucide/astro";
 import ProjectCard from "../../components/project-card.astro";
-import DefaultLayout from "../../layouts/default.astro";
-import doggoAvatar from "../../assets/doggo.jpg";
+import BlogLayout from "../../layouts/blog-layout.astro";
 
 const projectsCollection = await getCollection("projects");
 const projects = projectsCollection?.map((project) => {
@@ -12,58 +9,21 @@ const projects = projectsCollection?.map((project) => {
 });
 ---
 
-<DefaultLayout>
-  <div class="min-h-screen">
-    <header class="border-border border-b">
-      <div class="container mx-auto px-4 py-4">
-        <div class="mx-auto flex max-w-6xl items-center justify-between">
-          <a
-            href="/"
-            class="flex items-center gap-3 transition-opacity hover:opacity-80"
-          >
-            <Image
-              src={doggoAvatar}
-              loading={"eager"}
-              alt={"Profile pic"}
-              class={"h-10 w-10 rounded-full object-cover"}
-            />
-            <span class="font-semibold">Francesco Lombardo</span>
-          </a>
+<BlogLayout title="projects">
+  <section class="container mx-auto px-4 py-12">
+    <div class="mx-auto max-w-6xl">
+      <h1 class="mb-2 text-3xl font-bold md:text-4xl">All Projects</h1>
+      <p class="text-muted-foreground mb-8">
+        A collection of my work and side projects
+      </p>
 
-          <!-- Button for desktop -->
-          <a
-            href="/"
-            class="text-muted-foreground hover:text-primary hidden text-sm transition-colors sm:block"
-          >
-            Return to home
-          </a>
-
-          <!-- Button for mobile -->
-          <a
-            href="/"
-            class="text-muted-foreground hover:text-primary block text-sm transition-colors sm:hidden"
-          >
-            <House />
-          </a>
-        </div>
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          projects.map((project) => {
+            return <ProjectCard {...project} />;
+          })
+        }
       </div>
-    </header>
-
-    <section class="container mx-auto px-4 py-12">
-      <div class="mx-auto max-w-6xl">
-        <h1 class="mb-2 text-3xl font-bold md:text-4xl">All Projects</h1>
-        <p class="text-muted-foreground mb-8">
-          A collection of my work and side projects
-        </p>
-
-        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {
-            projects.map((project) => {
-              return <ProjectCard {...project} />;
-            })
-          }
-        </div>
-      </div>
-    </section>
-  </div>
-</DefaultLayout>
+    </div>
+  </section>
+</BlogLayout>
