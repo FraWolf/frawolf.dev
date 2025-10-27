@@ -6,11 +6,12 @@
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "frawolf-dev",
 	"main": "./dist/_worker.js/index.js",
-	"compatibility_date": "2025-10-04",
-	"compatibility_flags": [
-		"nodejs_compat",
-		"global_fetch_strictly_public"
-	],
+  "compatibility_date": "2025-10-01",
+  "compatibility_flags": [
+    "nodejs_compat",
+    "global_fetch_strictly_public",
+    "disable_nodejs_process_v2"
+  ],
 	"assets": {
 		"binding": "ASSETS",
 		"directory": "./dist"
