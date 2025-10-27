@@ -1,8 +1,11 @@
 ---
+import { Icon } from "astro-icon/components";
+
 interface Props {
   social: {
     name: string;
     url: string;
+    icon: string;
   };
 }
 
@@ -11,8 +14,9 @@ const { social } = Astro.props;
 
 <a
   href={social.url}
-  class="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-border hover:border-primary hover:text-primary transition-colors"
+  class="border-border hover:border-primary hover:text-primary inline-flex items-center gap-2 rounded-md border px-4 py-2 transition-colors"
   target="_blank"
 >
+  <Icon name={social.icon} />
   {social.name}
 </a>

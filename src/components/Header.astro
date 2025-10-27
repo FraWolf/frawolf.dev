@@ -4,22 +4,22 @@ import SocialBtn from "./social-btn.astro";
 const socials = [
   {
     name: "GitHub",
-    icon: "fab fa-github",
+    icon: "github",
     url: "https://github.com/FraWolf",
   },
   {
     name: "LinkedIn",
-    icon: "fab fa-linkedin",
+    icon: "linkedin",
     url: "https://www.linkedin.com/in/francesco-lombardo-454988163/",
   },
   {
     name: "Email",
-    icon: "fas fa-envelope",
+    icon: "email",
     url: "mailto:francesco.lombardo1709@gmail.com",
   },
   {
     name: "Ethereum",
-    icon: "fab fa-ethereum",
+    icon: "ethereum",
     url: "https://etherscan.io/address/0x889eb06db012f3de50432b9c4731f1946e7bc093",
   },
 ];
@@ -27,28 +27,29 @@ const socials = [
 
 <section class="container mx-auto px-4 py-12 md:py-20">
   <div
-    class="flex flex-col md:flex-row items-center justify-center gap-4 mb-12"
+    class="mb-12 flex flex-col items-center justify-center gap-4 md:flex-row"
   >
     <img
-      class="w-16 h-16 rounded-full object-cover"
+      class="h-16 w-16 rounded-full object-cover"
       src="/doggo.jpg"
       alt="Doggo"
     />
+
     <div class="flex flex-col gap-2">
-      <h1 class="text-2xl md:text-4xl font-bold">Francesco Lombardo</h1>
-      <p class="text-lg md:text-xl text-muted-foreground">
+      <h1 class="text-2xl font-bold md:text-4xl">Francesco Lombardo</h1>
+      <p class="text-muted-foreground text-lg md:text-xl">
         Junior Full Stack Developer
       </p>
     </div>
   </div>
 
-  <div class="flex flex-col items-center text-center max-w-2xl mx-auto">
-    <p class="text-base text-muted-foreground leading-relaxed mb-8">
+  <div class="mx-auto flex max-w-2xl flex-col items-center text-center">
+    <p class="text-muted-foreground mb-8 text-base leading-relaxed">
       I build accessible, pixel-perfect digital experiences for the web.
       Specializing in modern JavaScript frameworks and creating seamless user
       interfaces.
     </p>
-    <div class="flex flex-wrap gap-3 justify-center">
+    <div class="flex flex-wrap justify-center gap-3">
       {
         socials.map((social) => {
           return <SocialBtn social={social} />;
