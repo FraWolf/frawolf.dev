@@ -16,41 +16,51 @@ const { name, description, link, technologies, discontinued } = Astro.props;
     { "border-yellow-500/50": discontinued }
   )}
 >
-  {
+  <!-- {
     discontinued && (
-      <span class="absolute top-3 left-3 text-xs px-2 py-1 rounded-md bg-yellow-500/10 text-yellow-500 border border-yellow-500/30">
+      <span class="absolute top-3 left-3 rounded-md border border-yellow-500/30 bg-yellow-500/10 px-2 py-1 text-xs text-yellow-500">
         Discontinued
       </span>
     )
-  }
+  } -->
 
   <div
     class={tw("flex items-start justify-between gap-4 mb-3", {
-      "pt-6": discontinued,
+      // "pt-6": discontinued,
     })}
   >
     <div class="flex-1">
-      <h3
-        class="text-lg font-semibold group-hover:text-primary transition-colors"
-      >
-        {name}
-      </h3>
+      {
+        !link && (
+          <h3 class="group-hover:text-primary text-lg font-semibold transition-colors">
+            {name}
+          </h3>
+        )
+      }
       {
         link && (
-          <p class="text-xs text-muted-foreground/70 mt-1">
-            {parsePreviewUrl(link)}
-          </p>
+          <>
+            <a
+              class="group-hover:text-primary text-lg font-semibold transition-colors"
+              href={link}
+              target="_blank"
+            >
+              {name}
+            </a>
+            <p class="text-muted-foreground/70 mt-1 text-xs">
+              {parsePreviewUrl(link)}
+            </p>
+          </>
         )
       }
     </div>
-
     {
       !!link && (
         <a
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          class="text-muted-foreground hover:text-primary transition-colors flex-shrink-0"
+          class="text-muted-foreground hover:text-primary flex-shrink-0 transition-colors"
           aria-label={`View ${name} project`}
         >
           <ExternalLink class="h-4 w-4" />
@@ -58,9 +68,10 @@ const { name, description, link, technologies, discontinued } = Astro.props;
       )
     }
   </div>
-  <p class="text-sm text-muted-foreground leading-relaxed mb-4">
+  <p class="text-muted-foreground mb-4 text-sm leading-relaxed">
     {description}
   </p>
+
   <div class="flex flex-wrap gap-2">
     {
       technologies.map((tech) => {

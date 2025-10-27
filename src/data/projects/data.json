@@ -13,23 +13,49 @@
   },
   {
     "name": "Quria",
-    "description": "Destiny API Wrapper written in TypeScript",
+    "description": "Destiny API Wrapper written in TypeScript.",
     "link": "https://github.com/FraWolf/quria",
     "technologies": ["TypeScript"],
     "discontinued": false
   },
   {
     "name": "giornogaming.it",
-    "description": "Website for italian streamer and content creator GiornoGaming",
+    "description": "Website for italian streamer and content creator GiornoGaming.",
     "link": "https://giornogaming.it",
-    "technologies": ["TypeScript"],
+    "technologies": [
+      "TypeScript",
+      "Astro",
+      "TailwindCSS",
+      "Cloudflare Workers"
+    ],
     "discontinued": false
   },
   {
     "name": "BF6 Config Editor",
     "description": "Easily edit, tweak, and optimize your Battlefield 6 configuration files with our BF6 Config Editor. Improve FPS, visuals, and gameplay settings in seconds.",
     "link": "https://github.com/FraWolf/bf6-config",
-    "technologies": ["React", "TypeScript", "Cloudflare Pages"],
+    "technologies": ["React", "TypeScript", "TailwindCSS", "Cloudflare Pages"],
     "discontinued": false
+  },
+  {
+    "name": "Destiny 2 Italia Website & Bots",
+    "description": "Website and various bot for italian Destiny 2 Community.",
+    "link": "https://destiny2italia.it",
+    "technologies": ["SvelteKit", "TypeScript", "Discord.js", "TailwindCSS"],
+    "discontinued": false
+  },
+  {
+    "name": "Discord.js v13 Bot template",
+    "description": "Discord bot kickstarter template for discord.js v13.",
+    "link": "https://github.com/FraWolf/discordjs-v13-template",
+    "technologies": ["TypeScript", "Discord.js"],
+    "discontinued": true
+  },
+  {
+    "name": "Lilith - Diablo 4 Discord Bot",
+    "description": "A Discord.js bot for Diablo 4 that allows tracking events, news and more. ",
+    "link": "https://github.com/lilith-discord-bot/lilith",
+    "technologies": ["TypeScript", "Discord.js"],
+    "discontinued": true
   }
 ]
