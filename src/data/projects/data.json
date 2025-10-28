@@ -45,7 +45,7 @@
   },
   {
     "name": "Destiny 2 Italia Website & Bots",
-    "description": "Website and various bot for italian Destiny 2 Community.",
+    "description": "Website and various bots for italian Destiny 2 Community.",
     "link": "https://destiny2italia.it",
     "technologies": ["SvelteKit", "TypeScript", "Discord.js", "TailwindCSS"],
     "discontinued": false

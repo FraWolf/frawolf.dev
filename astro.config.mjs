@@ -8,6 +8,7 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
+  prefetch: true,
   adapter: cloudflare({
     platformProxy: {
       enabled: true,
@@ -15,10 +16,8 @@ export default defineConfig({
 
     imageService: "passthrough",
   }),
-
   vite: {
     plugins: [tailwindcss()],
   },
-
   integrations: [icon()],
 });

@@ -15,7 +15,11 @@ const projects = (await getCollection("projects"))
   <div class="mx-auto max-w-6xl">
     <div class="mb-6 flex items-center justify-between">
       <h2 class="text-2xl font-bold">Projects</h2>
-      <a href="/projects" class="text-primary text-sm hover:underline">
+      <a
+        href="/projects"
+        class="text-primary text-sm hover:underline"
+        data-astro-prefetch
+      >
         View all →
       </a>
     </div>
