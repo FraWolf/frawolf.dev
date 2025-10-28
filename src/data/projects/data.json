@@ -73,6 +73,7 @@
   {
     "name": "TheFirstDescendant API",
     "description": "Unofficial API for The First Descendant providing real-time game data access through clean, documented endpoints.",
+    "link": "https://github.com/FraWolf/tfd-api",
     "technologies": ["TypeScript"],
     "discontinued": true
   },
