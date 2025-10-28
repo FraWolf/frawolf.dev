@@ -13,7 +13,7 @@
   },
   {
     "name": "Quria",
-    "description": "Destiny API Wrapper written in TypeScript.",
+    "description": "Destiny 2 API Wrapper written in TypeScript.",
     "link": "https://github.com/FraWolf/quria",
     "technologies": ["TypeScript"],
     "discontinued": false
@@ -28,6 +28,12 @@
       "TailwindCSS",
       "Cloudflare Workers"
     ],
+    "discontinued": false
+  },
+  {
+    "name": "Twitch Subscription Telegram Bot",
+    "description": "Telegram bot for checking Twitch Subscription to a specific creator and granting access to exclusive groups.",
+    "technologies": ["TypeScript", "Grammy", "Twurple"],
     "discontinued": false
   },
   {
@@ -53,9 +59,27 @@
   },
   {
     "name": "Lilith - Diablo 4 Discord Bot",
-    "description": "A Discord.js bot for Diablo 4 that allows tracking events, news and more. ",
+    "description": "A Discord.js bot for Diablo 4 that allows tracking events, news and more.",
     "link": "https://github.com/lilith-discord-bot/lilith",
     "technologies": ["TypeScript", "Discord.js"],
+    "discontinued": true
+  },
+  {
+    "name": "Diablo 4 events Twitch overlay",
+    "description": "A real-time Twitch overlay that displays active and upcoming world events, updating automatically using timers. Designed to keep streamers and viewers informed without leaving the stream.",
+    "technologies": ["TypeScript", "React"],
+    "discontinued": true
+  },
+  {
+    "name": "TheFirstDescendant API",
+    "description": "Unofficial API for The First Descendant providing real-time game data access through clean, documented endpoints.",
+    "technologies": ["TypeScript"],
+    "discontinued": true
+  },
+  {
+    "name": "Tuya SmartLife API",
+    "description": "A lightweight and easy-to-use API wrapper for Tuya SmartLife devices, enabling seamless integration and control of smart home devices through HTTP endpoints.",
+    "technologies": ["TypeScript", "Cloudflare Workers"],
     "discontinued": true
   }
 ]
