@@ -31,6 +31,13 @@
     "discontinued": false
   },
   {
+    "name": "Salvatore Cucinotta Photographer Portfolio",
+    "description": "Portfolio website showcasing the photography work and visual projects of photographer Salvatore Cucinotta.",
+    "link": "https://salvatorecucinotta-portfolio.netlify.app/",
+    "technologies": ["TypeScript", "Astro", "TailwindCSS", "Netlify"],
+    "discontinued": false
+  },
+  {
     "name": "Twitch Subscription Telegram Bot",
     "description": "Telegram bot for checking Twitch Subscription to a specific creator and granting access to exclusive groups.",
     "technologies": ["TypeScript", "Grammy", "Twurple"],
